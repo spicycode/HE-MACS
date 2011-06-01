@@ -51,5 +51,6 @@
 (global-set-key (kbd "C-c C-c M-x") 'execute-extended-command)
 (global-set-key (kbd "M-/") 'hippie-expand)
 
+(load "config-functions")
 (load "config-global")
-
+(load "config-ruby")

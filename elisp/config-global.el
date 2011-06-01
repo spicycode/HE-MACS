@@ -21,8 +21,6 @@
 
 (setq vc-handled-backends nil)
 
-(fset 'yes-or-no-p 'y-or-n-p)
-
 ;; SavePlace - remember where I was when I last edited a file
 (require 'saveplace)
 (setq-default save-place t)
@@ -78,3 +76,22 @@
 
 (setq uniquify-buffer-name-style 'post-forward
       uniquify-separator ":")
+
+;; do not confirm file creation
+(setq confirm-nonexistent-file-or-buffer nil)
+
+(icomplete-mode t)                       ;; completion in minibuffer
+(setq
+  icomplete-prospects-height 1           ;; don't spam my minibuffer
+  icomplete-compute-delay 0)             ;; don't wait
+
+(setq teach-extended-commands-p t)
+(defalias 'qrr 'query-replace-regexp)
+(defalias 'qr 'query-replace)
+(defalias 'yes-or-no-p 'y-or-n-p)
+
+;; AutoComplete
+(require 'auto-complete)
+(add-to-list 'ac-dictionary-directories "~/.emacs.d/dict")
+(require 'auto-complete-config)
+(ac-config-default)
