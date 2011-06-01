@@ -16,8 +16,6 @@
 (set-frame-font "Menlo-14")
 
 (require 'color-theme)
-;;(load  "~/.emacs.d/elpa/color-theme-solarized-1.0.0/color-theme-solarized.el")
-;;(color-theme-solarized-dark)
 (load  "~/.emacs.d/vendor/color-theme-github.el")
 (color-theme-github)
 
