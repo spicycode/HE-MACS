@@ -15,6 +15,8 @@
 (add-to-list 'package-archives '("marmalade" . "http://marmalade-repo.org/packages/"))
 
 (add-to-list 'load-path (concat dotfiles-dir "/vendor/"))
+(add-to-list 'load-path (concat dotfiles-dir "/vendor/org-mode/lisp/"))
+(add-to-list 'load-path (concat dotfiles-dir "/vendor/coffee-mode/"))
 (add-to-list 'load-path (concat dotfiles-dir "/elisp/"))
 
 ;; MAC KEY MODE
@@ -36,11 +38,7 @@
 
 (define-key mac-key-mode-map [(alt /)] 'comment-or-uncomment-region-or-line)
 
-(define-key mac-key-mode-map [(alt t)] 'textmate-goto-file)
-
 (define-key mac-key-mode-map [(alt shift t)] 'textmate-goto-symbol)
-
-(define-key mac-key-mode-map [(alt shift l)] 'textmate-select-line)
 
 (require 'smex)
 (smex-initialize)
@@ -54,3 +52,5 @@
 (load "config-functions")
 (load "config-global")
 (load "config-ruby")
+(load "config-coffee-script")
+

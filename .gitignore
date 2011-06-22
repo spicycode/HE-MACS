@@ -2,3 +2,4 @@ elpa/*
 ac-comphist.dat
 elisp/custom.el
 auto-save-list
+eshell
