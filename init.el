@@ -39,6 +39,7 @@
 (define-key mac-key-mode-map [(alt /)] 'comment-or-uncomment-region-or-line)
 
 (define-key mac-key-mode-map [(alt shift t)] 'textmate-goto-symbol)
+(define-key mac-key-mode-map [(alt t)] 'textmate-goto-file)
 
 (require 'smex)
 (smex-initialize)
