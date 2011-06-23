@@ -1,3 +1,4 @@
+-*- coding: utf-8 -*-
 (setq custom-file "~/.emacs.d/elisp/custom.el")
 (load custom-file 'noerror)
 
@@ -15,7 +16,7 @@
 (add-to-list 'package-archives '("marmalade" . "http://marmalade-repo.org/packages/"))
 
 (add-to-list 'load-path (concat dotfiles-dir "/vendor/"))
-(add-to-list 'load-path (concat dotfiles-dir "/vendor/org-mode/lisp/"))
+(add-to-list 'load-path (concat dotfiles-dir "/vendor/rinari/"))
 (add-to-list 'load-path (concat dotfiles-dir "/vendor/coffee-mode/"))
 (add-to-list 'load-path (concat dotfiles-dir "/elisp/"))
 
@@ -29,6 +30,7 @@
 	    (if mac-key-mode
 		(setq mac-option-modifier 'meta)
 	      (setq mac-option-modifier nil))))
+(setq mac-key-mode-lighter "mac")
 
 (define-key mac-key-mode-map [(alt l)] 'goto-line)
 
