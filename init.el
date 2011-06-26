@@ -1,9 +1,15 @@
--*- coding: utf-8 -*-
-(setq custom-file "~/.emacs.d/elisp/custom.el")
-(load custom-file 'noerror)
+(setenv "PATH"
+        (concat
+         (expand-file-name "~/.bin") ";"
+         "/usr/local/bin" ";"
+         (getenv "PATH")))
 
 ;; Get user local bin on the path first
+(push (expand-file-name "~/.bin") exec-path)
 (push "/usr/local/bin" exec-path)
+
+(setq custom-file "~/.emacs.d/elisp/custom.el")
+(load custom-file 'noerror)
 
 ; Setting up the load path
 (setq dotfiles-dir (file-name-directory
@@ -16,9 +22,15 @@
 (add-to-list 'package-archives '("marmalade" . "http://marmalade-repo.org/packages/"))
 
 (add-to-list 'load-path (concat dotfiles-dir "/vendor/"))
+(add-to-list 'load-path (concat dotfiles-dir "/vendor/full-ack/"))
 (add-to-list 'load-path (concat dotfiles-dir "/vendor/rinari/"))
 (add-to-list 'load-path (concat dotfiles-dir "/vendor/coffee-mode/"))
 (add-to-list 'load-path (concat dotfiles-dir "/elisp/"))
+
+(autoload 'ack-same "full-ack" nil t)
+(autoload 'ack "full-ack" nil t)
+(autoload 'ack-find-same-file "full-ack" nil t)
+(autoload 'ack-find-file "full-ack" nil t)
 
 ;; MAC KEY MODE
 (require 'redo+)
@@ -55,5 +67,5 @@
 (load "config-functions")
 (load "config-global")
 (load "config-ruby")
+(load "config-lisp")
 (load "config-coffee-script")
-
