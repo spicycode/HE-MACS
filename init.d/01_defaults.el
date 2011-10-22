@@ -132,8 +132,15 @@
 (require 'color-theme)
 (setq color-theme-is-global t)
 
-(load-file
- (expand-file-name "color-theme-twilight-0.1/color-theme-twilight.el" my-elpa-dir))
+(setq color-theme-twilight-path
+      (expand-file-name "color-theme-twilight-0.1/color-theme-twilight.el" my-elpa-dir))
 
-(color-theme-twilight)
+(setq color-theme-github-path
+      (expand-file-name "color-theme-github.el" my-elisp-dir))
+
+
+(load-file color-theme-github-path)
+
+(color-theme-github)
+
 
