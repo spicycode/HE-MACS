@@ -15,6 +15,15 @@
 (setq my-init-dir
       (expand-file-name "init.d" my-emacs-config-dir))
 
+;; Add my elisp directory to load path
+(add-to-list 'load-path my-elisp-dir)
+
+; Add external projects to load path
+(dolist (project (directory-files my-elisp-external-dir t "\\w+"))
+  (when (file-directory-p project)
+    (add-to-list 'load-path project)))
+
+
 ;; Load all elisp files in ./init.d
 (if (file-exists-p my-init-dir)
     (dolist (file (directory-files my-init-dir t "\\.el$"))

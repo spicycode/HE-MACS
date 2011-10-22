@@ -11,8 +11,8 @@
 
 ;; Add in your own as you wish:
 (defvar my-packages '(anything anything-config anything-match-plugin clojurescript-mode
-			       coffee-mode color-theme color-theme-sanityinc-solarized haml-mode
-                               markdown-mode auto-complete
+			       coffee-mode color-theme color-theme-twilight color-theme-sanityinc-solarized
+                               haml-mode markdown-mode auto-complete
 			       paredit rainbow-delimiters sass-mode scss-mode starter-kit-ruby
                                starter-kit-js starter-kit-eshell starter-kit-lisp smex)
   "A list of packages to ensure are installed at launch.")
