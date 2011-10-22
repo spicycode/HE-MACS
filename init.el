@@ -9,6 +9,9 @@
 (setq my-elisp-dir
       (expand-file-name "elisp" my-emacs-config-dir))
 
+(setq my-elpa-dir
+      (expand-file-name "elpa" my-emacs-config-dir))
+
 (setq my-elisp-external-dir
       (expand-file-name "external" my-elisp-dir))
 
