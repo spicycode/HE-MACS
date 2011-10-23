@@ -44,6 +44,10 @@
 (add-to-list 'auto-mode-alist '("Guardfile" . ruby-mode))
 
 (setq rinari-major-modes '(ruby-mode-hook))
+;; Working around ruby starter kit bug https://github.com/technomancy/emacs-starter-kit/issues/99
+(remove-hook 'ruby-mode-hook 'esk-run-coding-hook)
+
+(require 'rspec-mode)
 
 ;; Markdown
 ;;;;;;;;;;;;;;;;;;;;
