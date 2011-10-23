@@ -133,6 +133,10 @@
 (require 'auto-complete-config)
 (ac-config-default)
 
+;; Textmate Mode
+(require 'textmate)
+(textmate-mode)
+
 ;; Color Theme
 (require 'color-theme)
 (setq color-theme-is-global t)
@@ -147,4 +151,6 @@
 
 (color-theme-github)
 
+(require 'hl-line)
 (set-face-background 'hl-line "light yellow")
+
