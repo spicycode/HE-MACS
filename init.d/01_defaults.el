@@ -122,6 +122,10 @@
 ;; - is `cd ..` (like vim)
 (define-key dired-mode-map "-" 'dired-up-directory)
 
+;; Nyan MODE!!!!!
+(require 'nyan-mode)
+(nyan-mode)
+
 ;; AutoComplete
 (require 'auto-complete)
 (add-to-list 'ac-dictionary-directories "~/.emacs.d/dict")
@@ -142,5 +146,3 @@
 (load-file color-theme-github-path)
 
 (color-theme-github)
-
-
