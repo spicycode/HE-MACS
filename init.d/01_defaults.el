@@ -125,6 +125,7 @@
 ;; Nyan MODE!!!!!
 (require 'nyan-mode)
 (nyan-mode)
+(nyan-start-animation)
 
 ;; AutoComplete
 (require 'auto-complete)
@@ -142,7 +143,8 @@
 (setq color-theme-github-path
       (expand-file-name "color-theme-github.el" my-elisp-dir))
 
-
 (load-file color-theme-github-path)
 
 (color-theme-github)
+
+(set-face-background 'hl-line "light yellow")
