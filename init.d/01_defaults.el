@@ -65,7 +65,7 @@
 
 ;; FONT
 ;;;;;;;;;;;;;;;;;;;;
-(set-frame-font "Menlo-14")
+(set-frame-font "Menlo-18")
 
 ;; Use fonts everywhere
 (setq global-font-lock-mode 1)
@@ -93,9 +93,9 @@
       ido-max-prospects 10)
 
 ;; Display ido results vertically, rather than horizontally
-(setq ido-decorations (quote ("\n-> " "" "\n   " "\n   ..." "[" "]" " [No match]" " [Matched]" " [Not readable]" " [Too big]" " [Confirm]")))
-(defun ido-disable-line-trucation () (set (make-local-variable 'truncate-lines) nil))
-(add-hook 'ido-minibuffer-setup-hook 'ido-disable-line-trucation)
+;; (setq ido-decorations (quote ("\n-> " "" "\n   " "\n   ..." "[" "]" " [No match]" " [Matched]" " [Not readable]" " [Too big]" " [Confirm]")))
+;; (defun ido-disable-line-trucation () (set (make-local-variable 'truncate-lines) nil))
+;; (add-hook 'ido-minibuffer-setup-hook 'ido-disable-line-trucation)
 
 ;; uniquify changes conflicting buffer names from file<2> etc
 (require 'uniquify)

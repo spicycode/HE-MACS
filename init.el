@@ -1,5 +1,8 @@
 ;; On OS X Emacs doesn't use the shell PATH if it's not started from
 ;; the shell. If you're using homebrew modifying the PATH is essential.
+(setenv "PATH" (concat "/usr/local/bin:" (getenv "PATH")))
+(setenv "NODE_PATH" "/usr/local/lib/node")
+
 (if (eq system-type 'darwin)
     (push "/usr/local/bin" exec-path))
 
