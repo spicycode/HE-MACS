@@ -65,7 +65,7 @@
 
 ;; FONT
 ;;;;;;;;;;;;;;;;;;;;
-(set-frame-font "Menlo-18")
+(set-frame-font "Menlo-16")
 
 ;; Use fonts everywhere
 (setq global-font-lock-mode 1)
