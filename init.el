@@ -1,6 +1,6 @@
 ;; On OS X Emacs doesn't use the shell PATH if it's not started from
 ;; the shell. If you're using homebrew modifying the PATH is essential.
-(setenv "PATH" (concat "/usr/local/bin:" (getenv "PATH")))
+(setenv "PATH" (concat "~/.bin:/usr/local/bin:" (getenv "PATH")))
 (setenv "NODE_PATH" "/usr/local/lib/node")
 
 (if (eq system-type 'darwin)
@@ -39,4 +39,3 @@
 (if (file-exists-p my-init-dir)
     (dolist (file (directory-files my-init-dir t "\\.el$"))
       (load file)))
-

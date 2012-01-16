@@ -154,3 +154,6 @@
 (require 'hl-line)
 (set-face-background 'hl-line "light yellow")
 
+;; Evil mode is awesome
+(require 'evil)
+(evil-mode 1)

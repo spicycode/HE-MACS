@@ -7,7 +7,7 @@
   (package-refresh-contents))
 
 ;; Add in your own as you wish:
-(defvar my-packages '(anything anything-config anything-match-plugin clojurescript-mode
+(defvar my-packages '(anything anything-config anything-match-plugin clojurescript-mode clojure-mode
 			       coffee-mode color-theme color-theme-twilight
                                haml-mode markdown-mode auto-complete
                                ido-ubiquitous
