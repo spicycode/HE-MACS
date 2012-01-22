@@ -36,6 +36,10 @@
                                 (turn-on-eldoc-mode)))
 (add-hook 'emacs-lisp-mode-hook 'rainbow-delimiters-mode)
 
+(add-hook 'slime-repl-mode-hook
+          (defun clojure-mode-slime-font-lock ()
+            (let (font-lock-mode)
+              (clojure-mode-font-lock-setup))))
 ;; Ruby
 ;;;;;;;;;;;;;;;;;;;;
 (add-to-list 'auto-mode-alist '("Gemfile" . ruby-mode))
