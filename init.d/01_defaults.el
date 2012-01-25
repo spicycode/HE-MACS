@@ -21,14 +21,15 @@
 ;; no scratch message please
 (setq initial-scratch-message nil)
 
+;; Don't truncate lines
+(setq-default word-wrap nil)
+(setq default-truncate-lines nil)
+(setq truncate-partial-width-windows nil)
+
 ;; Hide toolbars/menubars/scrollbars
 (if (fboundp 'scroll-bar-mode) (scroll-bar-mode -1))
 (if (fboundp 'tool-bar-mode) (tool-bar-mode -1))
 (if (fboundp 'menu-bar-mode) (menu-bar-mode -1))
-
-;; Don't go opening new frames
-(if (featurep 'aquamacs)
-    (one-buffer-one-frame-mode 0))
 
 ;; no beeping
 (setq visible-bell t)
@@ -65,11 +66,14 @@
 
 ;; FONT
 ;;;;;;;;;;;;;;;;;;;;
-(set-frame-font "Menlo-16")
+(set-frame-font "Menlo-14")
 
 ;; Use fonts everywhere
 (setq global-font-lock-mode 1)
 
+;; Disable visual bell
+;;;;;;;;;;;;;;;;;;;;
+(setq visible-bell nil)
 
 ;; UTF-8
 ;;;;;;;;;;;;;;;;;;;;
@@ -147,12 +151,12 @@
 (setq color-theme-github-path
       (expand-file-name "color-theme-github.el" my-elisp-dir))
 
-(load-file color-theme-github-path)
+(load-file color-theme-twilight-path)
 
-(color-theme-github)
+(color-theme-twilight)
 
 (require 'hl-line)
-(set-face-background 'hl-line "light yellow")
+(set-face-background 'hl-line "grey")
 
 ;; Evil mode is awesome
 (require 'evil)
