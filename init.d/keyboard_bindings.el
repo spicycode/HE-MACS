@@ -4,10 +4,10 @@
 (global-set-key (kbd "M-/") 'hippie-expand)
 
 ;; MAC specific
-(define-key osx-key-mode-map (kbd "A-o") 'ido-find-file)
-(define-key osx-key-mode-map (kbd "A-b") 'ido-switch-buffer)
-(define-key osx-key-mode-map (kbd "A-w") 'ido-kill-buffer)
-(define-key osx-key-mode-map (kbd "A-/") 'comment-or-uncomment-region-or-line)
+(global-set-key [(super o)] 'ido-find-file)
+(global-set-key [(super b)] 'ido-switch-buffer)
+(global-set-key [(super w)] 'ido-kill-buffer)
+(global-set-key [(super /)] 'comment-or-uncomment-region-or-line)
 
 ;; SMEX:
 (global-set-key (kbd "M-x") 'smex)
