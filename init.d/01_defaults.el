@@ -155,8 +155,8 @@
 
 (color-theme-twilight)
 
-(require 'hl-line)
-(set-face-background 'hl-line "grey")
+;; (require 'hl-line)
+;; (set-face-background 'hl-line "dark grey")
 
 ;; Evil mode is awesome
 (require 'evil)
