@@ -11,7 +11,7 @@
 			       coffee-mode color-theme color-theme-twilight
                                haml-mode markdown-mode auto-complete
                                ido-ubiquitous
-                               ctags-update
+                               ctags-update exec-path-from-shell
 			       paredit rainbow-delimiters sass-mode scss-mode starter-kit-ruby
                                starter-kit-js starter-kit-eshell starter-kit-lisp smex
                                yaml-mode haskell-mode gist textmate)

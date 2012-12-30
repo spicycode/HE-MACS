@@ -162,3 +162,7 @@
 ;; Evil mode is awesome
 (require 'evil)
 (evil-mode 1)
+
+;; Help resolve exec path issues
+;; https://github.com/purcell/exec-path-from-shell
+(exec-path-from-shell-initialize)
