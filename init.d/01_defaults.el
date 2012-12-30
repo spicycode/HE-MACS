@@ -23,7 +23,8 @@
 
 ;; Don't truncate lines
 (setq-default word-wrap nil)
-(setq default-truncate-lines nil)
+(setq default-truncate-lines t)
+(setq truncate-lines t)
 (setq truncate-partial-width-windows nil)
 
 ;; Hide toolbars/menubars/scrollbars
@@ -66,7 +67,7 @@
 
 ;; FONT
 ;;;;;;;;;;;;;;;;;;;;
-(set-frame-font "Menlo-14")
+(set-frame-font "Source Code Pro-16")
 
 ;; Use fonts everywhere
 (setq global-font-lock-mode 1)
@@ -151,12 +152,12 @@
 (setq color-theme-github-path
       (expand-file-name "color-theme-github.el" my-elisp-dir))
 
-(load-file color-theme-twilight-path)
+(load-file color-theme-github-path)
 
-(color-theme-twilight)
+(color-theme-github)
 
-;; (require 'hl-line)
-;; (set-face-background 'hl-line "dark grey")
+(require 'hl-line)
+(set-face-background 'hl-line "light grey")
 
 ;; Evil mode is awesome
 (require 'evil)

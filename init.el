@@ -1,9 +1,10 @@
 ;; On OS X Emacs doesn't use the shell PATH if it's not started from
 ;; the shell. If you're using homebrew modifying the PATH is essential.
-(setenv "PATH" (concat "~/.bin:/usr/local/bin:" (getenv "PATH")))
+(setenv "PATH" (concat "~/.bin:/opt/github/homebrew/bin:/usr/local/bin:" (getenv "PATH")))
 (setenv "NODE_PATH" "/usr/local/lib/node")
 
 (if (eq system-type 'darwin)
+    (push "/opt/github/homebrew/bin/" exec-path)
     (push "/usr/local/bin" exec-path))
 
 (setq my-emacs-init-file
@@ -33,7 +34,6 @@
 (dolist (project (directory-files my-elisp-external-dir t "\\w+"))
   (when (file-directory-p project)
     (add-to-list 'load-path project)))
-
 
 ;; Load all elisp files in ./init.d
 (if (file-exists-p my-init-dir)
