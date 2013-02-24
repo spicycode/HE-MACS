@@ -25,3 +25,5 @@
                  (package-version-join available-version))
         (package-install name)
         (package-delete file-name (package-version-join current-version))))))
+
+(defun inf-ruby-keys () )

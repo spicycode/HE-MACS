@@ -10,7 +10,7 @@
 (defvar my-packages '(anything anything-config anything-match-plugin clojurescript-mode clojure-mode
 			       coffee-mode color-theme color-theme-twilight
                                haml-mode markdown-mode auto-complete
-                               ido-ubiquitous
+                               ido-ubiquitous inf-ruby
                                ctags-update exec-path-from-shell
 			       paredit rainbow-delimiters sass-mode scss-mode starter-kit-ruby
                                starter-kit-js starter-kit-eshell starter-kit-lisp smex
